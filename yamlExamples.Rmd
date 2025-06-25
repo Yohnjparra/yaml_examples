@@ -3,9 +3,9 @@ title: "Yaml_examples"
 author: "Yohn Jairo Parra Bautista, PhD."
 date: '2025-06-18'
 output:
+  word_document: default
   pdf_document: default
   html_document: default
-  word_document: default
 ---
 
 ```{r setup, include=FALSE}
@@ -90,3 +90,47 @@ plot(pressure)
 ```
 
 Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+
+
+```{r pressure 2, fig.width=5, fig.height=5, echo=FALSE}
+plot(pressure)
+```
+
+
+## Insert Tables
+
+```{r}
+knitr::kable(head(cars), 
+             caption = "Top 6 rows of cars dataset")
+```
+
+## Insert an equation
+
+$$
+Y = \beta_0 + \beta_1 x
+$$
+## Insert Images
+
+![famu logo](https://dxbhsrqyrr690.cloudfront.net/sidearm.nextgen.sites/famuathletics.com/images/2023/10/6/A_M_LOGO.png)
+
+## Insert an Animated GIF and Video
+
+![animated1](animated1.gif)
+
+## Insert test with some footnotes
+
+Here is a footnote reference [^1] and another [^longnote]
+
+Here is an inline footnote ^[Inline notes are easier to write, since you don't have to pick an identified and move down to type the note.]
+
+[^1]: Here is the footnote
+[^longnote]: Here's one with multiple blocks
+
+
+
+
+```{r}
+
+```
+
